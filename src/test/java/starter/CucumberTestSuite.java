@@ -9,6 +9,6 @@ import org.junit.runner.RunWith;
         plugin = {"pretty"},
         features = "src/test/resources/features",
         glue = "starter.stepdefinitions",
-        tags = "@TextBox"
+        tags = "@RadioButton"
 )
 public class CucumberTestSuite {}

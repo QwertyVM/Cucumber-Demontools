@@ -37,8 +37,19 @@ public class DemoQA_Elements_StepDefinition {
     }
     @Then("Visualizo el resumen de los datos")
     public void visualizo_el_resumen_de_los_datos() {
-
     }
 
+    @Given("Visualizo las opciones")
+    public void visualizo_las_opciones() {
+
+    }
+    @When("^selecciono el radio button: \"([^\"]*)\"$")
+    public void selecciono_el_radio_button(String opcRadioButton){
+        demoqa_ElementsPage.seleccionarRB(opcRadioButton);
+    }
+    @Then("^Visualizo el mensaje: \"([^\"]*)\"$")
+    public void visualizo_el_mensaje(String expectedMessage) {
+        Assert.assertEquals(expectedMessage,demoqa_ElementsPage.getActualMessage());
+    }
 
 }

@@ -23,6 +23,9 @@ public class DemoQA_ElementsUI extends PageObject {
     @FindBy(id = "permanentAddress")
     WebElement inputPermanentAddress;
 
+    @FindBy(xpath = "//p[@class='mt-3']")
+    WebElement actualResultMessage;
+
     public void selectCategory(String categoria) {
         WebElement moduloText = getDriver().findElement(By.xpath("//span[contains(text(),'"+categoria+"')]"));
         pageUtils.esperarYdarClic(moduloText, Duration.ofSeconds(20));
@@ -42,4 +45,13 @@ public class DemoQA_ElementsUI extends PageObject {
     public void ingresar_P_Address(String p_address) {
         inputPermanentAddress.sendKeys(p_address);
     }
+
+    public void clickRB(String opcRB) {
+        WebElement rbOPC = getDriver().findElement(By.xpath("//label[contains(text(),'"+opcRB+"')]"));
+        pageUtils.esperarYdarClic(rbOPC,Duration.ofSeconds(20));
+    }
+    public String getActualMessageRB(){
+        return actualResultMessage.getText();
+    }
+
 }

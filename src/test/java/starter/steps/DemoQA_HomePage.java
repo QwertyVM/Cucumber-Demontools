@@ -2,7 +2,7 @@ package starter.steps;
 
 import net.thucydides.core.annotations.Step;
 import starter.locators.DemoQA_HomeUI;
-import starter.utils.Page_utils;
+
 
 public class DemoQA_HomePage {
 

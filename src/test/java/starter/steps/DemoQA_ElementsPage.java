@@ -25,4 +25,13 @@ public class DemoQA_ElementsPage {
     public void ingresar_p_Address(String p_address) {
         demoQA_elementsUI.ingresar_P_Address(p_address);
     }
+
+    @Step("Seleccionar Radio Button")
+    public void seleccionarRB(String opcRb) {
+        demoQA_elementsUI.clickRB(opcRb);
+    }
+    @Step("Obtener Texto de mensaje")
+    public String getActualMessage() {
+        return demoQA_elementsUI.getActualMessageRB();
+    }
 }
